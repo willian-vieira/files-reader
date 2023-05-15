@@ -10,9 +10,7 @@ import java.util.List;
 
 public class Program {
     public static void main(String[] args) {
-        //--- Caminho do arquivo a ser lido ---
         String path = "src/temp/in.txt";
-        //--- Lista do tipo Product ---
         List<Product> listProduct = new ArrayList<>();
 
         /**
@@ -21,13 +19,12 @@ public class Program {
          * Tudo que for instanciado na linha do Try será desalocado automaticamente ao final do Bloco Try.
          */
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-            //--- Realiza a leitura da linha do arquivo até quebra de linha ---
             String line = br.readLine();
             line = br.readLine();
 
             while (line != null) {
                 String[] vect = line.split(",");
-                //--- Variáveis para cada posição do Vetor 'vect' ---
+
                 String name = vect[0];
                 Double price = Double.parseDouble(vect[1]);
                 Integer quantity = Integer.parseInt(vect[2]);

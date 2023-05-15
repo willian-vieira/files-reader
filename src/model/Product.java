@@ -2,9 +2,6 @@ package model;
 
 import java.io.Serializable;
 
-/**
- * Class Product
- */
 public class Product implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -12,11 +9,9 @@ public class Product implements Serializable {
     private Double price;
     private Integer quantity;
 
-    //--- Empty Constructor ---
     public Product() {
     }
 
-    //--- Constructor ---
     public Product(String name, Double price, Integer quantity) {
         super();
         this.name = name;
@@ -24,7 +19,6 @@ public class Product implements Serializable {
         this.quantity = quantity;
     }
 
-    //--- Getters and Setters ---
     public String getName() {
         return name;
     }
